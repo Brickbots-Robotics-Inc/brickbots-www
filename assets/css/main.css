@@ -1,0 +1,161 @@
+/* =========================================
+   main.css - Core Branding & Utility Styles
+   ========================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@400;500;600;700;800;900&display=swap');
+
+:root {
+    /* Color Palette - Premium Dark Tech */
+    --bg-main: #030712; /* Deep space dark */
+    --bg-secondary: #111827; /* Slightly lighter gray-blue */
+    --bg-sidebar: #020617; /* Slate dark */
+    
+    /* Text Colors */
+    --text-primary: #f8fafc;
+    --text-secondary: #94a3b8;
+    --text-muted: #64748b;
+    --text-sidebar: #94a3b8;
+    --text-sidebar-head: #ffffff;
+    
+    /* Accents */
+    --accent: #0ea5e9;
+    --accent-dark: #0284c7;
+    --accent-glow: rgba(14, 165, 233, 0.4);
+    --accent-gradient: linear-gradient(135deg, #0ea5e9 0%, #8b5cf6 100%);
+    --accent-gradient-hover: linear-gradient(135deg, #38bdf8 0%, #a78bfa 100%);
+    
+    /* FTC Team Specific */
+    --ftc-accent: #10B981;
+    --ftc-accent-dark: #059669;
+
+    /* Semantic Elements */
+    --border: rgba(255, 255, 255, 0.1);
+    --border-dark: rgba(255, 255, 255, 0.05);
+
+    /* Typography */
+    --font-main: 'Inter', sans-serif;
+    --font-heading: 'Outfit', sans-serif;
+
+    /* Layout */
+    --sidebar-width: 320px;
+}
+
+/* =========================================
+   Reset & Base Styles
+   ========================================= */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
+
+body {
+    font-family: var(--font-main);
+    line-height: 1.7;
+    color: var(--text-primary);
+    background: var(--bg-main);
+    display: flex;
+    min-height: 100vh;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* =========================================
+   Typography Utilities
+   ========================================= */
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    color: var(--text-primary);
+    line-height: 1.2;
+}
+
+.gradient-text {
+    background: var(--accent-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    display: inline-block;
+}
+
+/* =========================================
+   Buttons & Links
+   ========================================= */
+.cta-button {
+    display: inline-block;
+    background: var(--accent-gradient);
+    color: #ffffff;
+    text-align: center;
+    padding: 14px 28px;
+    border-radius: 10px;
+    font-weight: 700;
+    font-family: var(--font-heading);
+    box-shadow: 0 10px 25px var(--accent-glow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.cta-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 35px var(--accent-glow);
+    color: white; /* Ensure text stays white */
+}
+
+.cta-button:active {
+    transform: translateY(-1px);
+}
+
+/* Base outline button for secondary actions */
+.btn-outline {
+    background: transparent;
+    border: 2px solid var(--accent);
+    color: var(--accent);
+    padding: 12px 26px;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-outline:hover {
+    background: var(--accent);
+    color: white;
+    box-shadow: 0 5px 15px var(--accent-glow);
+}
+
+/* =========================================
+   Animations
+   ========================================= */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+    animation: fadeIn 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+/* Staggered animation delays for lists/grids */
+.delay-100 { animation-delay: 100ms; }
+.delay-200 { animation-delay: 200ms; }
+.delay-300 { animation-delay: 300ms; }

@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BrickBots FLL #65018</title>
+    <link rel="icon" type="image/png" href="../../assets/images/brickbotsLogo.png">
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="../../assets/css/main.css">
+    <link rel="stylesheet" href="../../assets/css/team.css">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        /* FLL accent overrides — warm orange/amber palette to differentiate from FTC blue */
+        :root {
+            --ftc-accent: #f59e0b;
+            --ftc-accent-dark: #d97706;
+        }
+        .team-number-badge {
+            background: linear-gradient(135deg, #f59e0b, #d97706);
+        }
+        .btn-primary-ftc {
+            background: linear-gradient(135deg, #f59e0b, #d97706);
+        }
+        .btn-primary-ftc:hover {
+            background: linear-gradient(135deg, #d97706, #b45309);
+        }
+        .fll-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #f59e0b22, #d9770622);
+            border: 1px solid #f59e0b55;
+            color: #f59e0b;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+        }
+        .placeholder-box {
+            background: rgba(245, 158, 11, 0.07);
+            border: 1.5px dashed rgba(245, 158, 11, 0.35);
+            border-radius: 12px;
+            padding: 20px 24px;
+            color: #94a3b8;
+            font-style: italic;
+            font-size: 0.95rem;
+            margin-bottom: 1rem;
+        }
+        .placeholder-box strong {
+            color: #f59e0b;
+            font-style: normal;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="mobile-header">
+        <div class="mobile-logo">TEAM 65018</div>
+        <button class="hamburger" onclick="toggleMenu()" aria-label="Toggle Menu">☰</button>
+    </header>
+
+    <aside class="sidebar">
+        <div class="brand-header">
+            <a href="../../index.html">
+                <img src="../../assets/images/brickbotsLogo.png" alt="BrickBots Logo"
+                    class="brand-logo-img animate-fade-in delay-100">
+            </a>
+            <h1 class="brand-name animate-fade-in delay-200">Team 65018</h1>
+            <div class="brand-tagline animate-fade-in delay-200">BrickBots FLL</div>
+        </div>
+
+        <nav class="nav">
+            <a href="../../index.html" class="nav-link animate-fade-in delay-300">← BrickBots HQ</a>
+            <a href="#home" class="nav-link animate-fade-in delay-300">Home</a>
+            <a href="#robot" class="nav-link animate-fade-in delay-300">Robot</a>
+            <a href="#project" class="nav-link animate-fade-in delay-300">Innovation Project</a>
+            <a href="#team" class="nav-link animate-fade-in delay-300">Team</a>
+            <a href="#sponsors" class="nav-link animate-fade-in delay-300">Sponsors</a>
+            <a href="#contact" class="nav-link animate-fade-in delay-300">Contact</a>
+        </nav>
+
+        <a href="#contact" class="cta-button animate-fade-in delay-300">Contact Us</a>
+    </aside>
+
+
+    <main class="main">
+
+        <!-- HOME / HERO -->
+        <section id="home" class="hero animate-fade-in">
+            <div class="hero-content">
+                <div class="team-number-badge animate-fade-in delay-100">Team #65018</div>
+                <h1 class="animate-fade-in delay-200">BrickBots FLL</h1>
+                <div class="hero-subtitle animate-fade-in delay-200">
+                    <em>Young Builders, Big Ideas</em>
+                </div>
+
+                <p class="hero-desc animate-fade-in delay-300">
+                    BrickBots FLL Team 65018 is a team of 4th grade innovators competing in the
+                    FIRST LEGO League. They design, build, and program LEGO robots while tackling
+                    a real-world research challenge — proving that great engineering starts early.
+                </p>
+
+                <div class="hero-actions animate-fade-in delay-300">
+                    <a href="#team" class="btn-primary-ftc">Meet Our Team</a>
+                    <a href="#robot" class="btn-secondary-ftc">View Our Robot</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ROBOT SECTION -->
+        <div id="robot" class="spa-section">
+            <section class="hero-section">
+                <div class="container">
+                    <div class="hero-eyebrow" style="text-align: center; display: block; margin-bottom: 10px;">Engineering</div>
+                    <h2 style="font-size: 3.5rem; margin-bottom: 20px; color: white;" class="hero-heading">Our <span class="gradient-text">Robot</span></h2>
+                    <p style="font-size: 1.2rem; color: #94a3b8;">Built with LEGO SPIKE Prime — designed, built, and programmed entirely by the team</p>
+                </div>
+            </section>
+            <div class="container" style="padding-top: 4rem; padding-bottom: 4rem;">
+
+                <div class="placeholder-box">
+                    <strong>📸 Add a robot photo</strong> — drop <code>robotphoto.png</code> into <code>teams/65018/assets/images/</code>
+                </div>
+
+                <div class="component-card">
+                    <h3 style="font-size: 1.5rem; margin-bottom: 1rem; color: #0F172A;">
+                        <i class="fas fa-robot" style="color: #f59e0b;"></i> Drive Base
+                    </h3>
+                    <div class="placeholder-box">
+                        <strong>Placeholder:</strong> Describe the robot's drive base — motor configuration, wheel type, drivetrain design, and any key structural decisions.
+                    </div>
+                </div>
+
+                <div class="component-card">
+                    <h3 style="font-size: 1.5rem; margin-bottom: 1rem; color: #0F172A;">
+                        <i class="fas fa-hand-paper" style="color: #f59e0b;"></i> Attachments
+                    </h3>
+                    <div class="placeholder-box">
+                        <strong>Placeholder:</strong> Describe the robot's mission attachments — how many, what they do, how they attach/detach, and which missions they solve.
+                    </div>
+                </div>
+
+                <div class="component-card">
+                    <h3 style="font-size: 1.5rem; margin-bottom: 1rem; color: #0F172A;">
+                        <i class="fas fa-code" style="color: #f59e0b;"></i> Programming
+                    </h3>
+                    <div class="placeholder-box">
+                        <strong>Placeholder:</strong> Describe how the robot is programmed — language used (SPIKE App / Python), autonomous runs, how the team handles gyro corrections or sensor feedback.
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- INNOVATION PROJECT SECTION -->
+        <div id="project" class="spa-section">
+            <section class="hero-section">
+                <div class="hero-eyebrow" style="text-align: center; display: block; margin-bottom: 10px;">Research</div>
+                <h2 style="font-size: 3.5rem; margin-bottom: 20px; color: white;" class="hero-heading">Innovation <span class="gradient-text">Project</span></h2>
+                <p style="font-size: 1.2rem; color: #94a3b8; text-align: center; max-width: 600px; margin: 0 auto;">FLL teams identify a real-world problem and engineer a creative solution</p>
+            </section>
+            <div class="container" style="padding-top: 4rem; padding-bottom: 4rem;">
+
+                <div class="component-card">
+                    <h3 style="font-size: 1.5rem; margin-bottom: 1rem; color: #0F172A;">
+                        <i class="fas fa-lightbulb" style="color: #f59e0b;"></i> The Problem
+                    </h3>
+                    <div class="placeholder-box">
+                        <strong>Placeholder:</strong> What real-world problem did the team identify this season? Describe the issue and why it matters.
+                    </div>
+                </div>
+
+                <div class="component-card">
+                    <h3 style="font-size: 1.5rem; margin-bottom: 1rem; color: #0F172A;">
+                        <i class="fas fa-flask" style="color: #f59e0b;"></i> Our Solution
+                    </h3>
+                    <div class="placeholder-box">
+                        <strong>Placeholder:</strong> Describe the team's proposed solution. How does it work? Who did they interview or consult? What makes it innovative?
+                    </div>
+                </div>
+
+                <div class="component-card">
+                    <h3 style="font-size: 1.5rem; margin-bottom: 1rem; color: #0F172A;">
+                        <i class="fas fa-star" style="color: #f59e0b;"></i> Core Values
+                    </h3>
+                    <p>FLL Core Values are at the heart of everything Team 65018 does — we win together, respect each other, and always have fun.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- TEAM SECTION -->
+        <div id="team" class="spa-section">
+            <section class="team-section">
+                <div class="hero-eyebrow" style="text-align: center; display: block; margin-bottom: 10px;">The Builders</div>
+                <h2 style="text-align: center; font-size: 3.5rem; margin-bottom: 60px; color: white;" class="hero-heading">Meet Our <span class="gradient-text">Team</span></h2>
+                <div class="team-grid">
+
+                    <div class="team-card">
+                        <div class="team-avatar" style="background: #b45309;"><i class="fas fa-robot"></i></div>
+                        <h3>[Team Member 1]</h3>
+                        <p style="color: #fcd34d; font-weight: 600;">[Role — e.g., Robot Designer]</p>
+                    </div>
+
+                    <div class="team-card">
+                        <div class="team-avatar" style="background: #b45309;"><i class="fas fa-code"></i></div>
+                        <h3>[Team Member 2]</h3>
+                        <p style="color: #fcd34d; font-weight: 600;">[Role — e.g., Programmer]</p>
+                    </div>
+
+                    <div class="team-card">
+                        <div class="team-avatar" style="background: #b45309;"><i class="fas fa-lightbulb"></i></div>
+                        <h3>[Team Member 3]</h3>
+                        <p style="color: #fcd34d; font-weight: 600;">[Role — e.g., Innovation Project Lead]</p>
+                    </div>
+
+                    <div class="team-card">
+                        <div class="team-avatar" style="background: #b45309;"><i class="fas fa-users"></i></div>
+                        <h3>[Team Member 4]</h3>
+                        <p style="color: #fcd34d; font-weight: 600;">[Role — e.g., Core Values Captain]</p>
+                    </div>
+
+                </div>
+            </section>
+        </div>
+
+        <!-- SPONSORS SECTION -->
+        <div id="sponsors" class="spa-section">
+            <section style="padding: 140px 0 60px;">
+                <div class="hero-eyebrow" style="text-align: center; display: block; margin-bottom: 10px;">Supporters</div>
+                <h2 style="text-align: center; font-size: 3.5rem; margin-bottom: 60px; color: white;" class="hero-heading">Our <span class="gradient-text">Sponsors</span></h2>
+                <div class="sponsors-grid">
+                    <div class="sponsor-card">
+                        <img src="../../assets/images/polymaker.png" alt="Polymaker">
+                        <h3>Polymaker</h3>
+                    </div>
+                    <div class="sponsor-card">
+                        <img src="../../assets/images/google.png" alt="Google">
+                        <h3>Google</h3>
+                    </div>
+                    <div class="sponsor-card">
+                        <img src="../../assets/images/slack.png" alt="Slack" style="filter: invert(1) brightness(200%);">
+                        <h3>Slack</h3>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- CONTACT SECTION -->
+        <div id="contact" class="spa-section">
+            <section class="hero-section">
+                <div class="hero-eyebrow" style="text-align: center; display: block; margin-bottom: 10px;">Connect</div>
+                <h2 style="font-size: 3.5rem; margin-bottom: 20px; color: white;" class="hero-heading">Get in <span class="gradient-text">Touch</span></h2>
+            </section>
+            <div class="contact-section">
+                <div class="form-card">
+                    <h2 style="font-family: var(--font-heading); font-size: 2.5rem; color: white; margin-bottom: 1rem;">Contact Us</h2>
+                    <p style="color: #94a3b8; margin-bottom: 2rem;">Questions about the team? Want to sponsor or volunteer? Reach out below.</p>
+                    <form id="contactForm">
+                        <input type="text" id="name" placeholder="Your Name" required>
+                        <input type="email" id="email" placeholder="Your Email" required>
+                        <textarea id="message" rows="5" placeholder="Your Message" required></textarea>
+                        <button type="submit">Send Message</button>
+                    </form>
+                </div>
+            </div>
+            <script>
+                document.getElementById('contactForm').addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    alert("Thank you! Your message has been sent.");
+                });
+            </script>
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-col">
+                <h3>BrickBots FLL</h3>
+                <p>Team #65018</p>
+                <p>Est. 2025</p>
+                <div style="margin-top: 20px; font-size: 1.5rem; display: flex; gap: 15px;">
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h3>Quick Links</h3>
+                <p><a href="../../index.html">BrickBots Main Lab</a></p>
+                <p><a href="#robot">Our Robot</a></p>
+                <p><a href="#project">Innovation Project</a></p>
+                <p><a href="#team">The Team</a></p>
+                <p><a href="#sponsors">Sponsors</a></p>
+            </div>
+
+            <div class="footer-col">
+                <h3>Contact</h3>
+                <p><i class="fa-solid fa-envelope" style="margin-right: 10px; color: var(--ftc-accent);"></i>
+                    fll65018@brickbots.org</p>
+                <p><i class="fa-solid fa-location-dot" style="margin-right: 10px; color: var(--ftc-accent);"></i>
+                    BrickBots Facility</p>
+            </div>
+        </div>
+
+        <div
+            style="text-align: center; margin-top: 60px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.05); color: rgba(255,255,255,0.4); font-size: 0.85rem;">
+            &copy; 2026 BrickBots Innovation Accelerator. All rights reserved.
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            document.querySelector('.sidebar').classList.toggle('active');
+        }
+    </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const sections = document.querySelectorAll('section[id], div[id].spa-section');
+            const navLinks = document.querySelectorAll('.sidebar .nav a[href^="#"]');
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const id = entry.target.getAttribute('id');
+                        navLinks.forEach(link => {
+                            link.classList.remove('active');
+                            if (link.getAttribute('href') === '#' + id) {
+                                link.classList.add('active');
+                            }
+                        });
+                    }
+                });
+            }, { threshold: 0.2, rootMargin: "-10% 0px -50% 0px" });
+
+            sections.forEach(section => {
+                observer.observe(section);
+            });
+
+            // Subtle reveal animations
+            const revealObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            document.querySelectorAll('section, .spa-section').forEach(section => {
+                if (!section.classList.contains('hero')) {
+                    section.style.opacity = '0';
+                    section.style.transform = 'translateY(20px)';
+                    section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                    revealObserver.observe(section);
+                }
+            });
+        });
+    </script>
+
+</body>
+
+</html>

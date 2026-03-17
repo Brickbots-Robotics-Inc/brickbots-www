@@ -1,0 +1,462 @@
+/* =========================================
+   team.css - Specific Styles for FTC Team
+   ========================================= */
+
+body {
+    display: block;
+    background-color: var(--bg-main);
+    color: var(--text-primary);
+}
+
+/* Mobile Header */
+.mobile-header {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    background: rgba(10, 14, 26, 0.95);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    padding: 0 24px;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.mobile-logo {
+    color: #fff;
+    font-weight: 800;
+    font-size: 1.2rem;
+    font-family: var(--font-heading);
+    letter-spacing: -0.5px;
+}
+
+.hamburger {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1.8rem;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+/* Sidebar Navigation */
+.sidebar {
+    width: var(--sidebar-width);
+    background: var(--bg-sidebar);
+    color: var(--text-sidebar);
+    padding: 50px 40px;
+    position: fixed;
+    height: 100vh;
+    overflow-y: auto;
+    border-right: 1px solid rgba(255, 255, 255, 0.05);
+    z-index: 900;
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    flex-direction: column;
+}
+
+.brand-header { margin-bottom: 2rem; }
+
+.brand-logo-img {
+    width: 100%;
+    max-width: 160px;
+    margin-bottom: 24px;
+    filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3));
+    transition: transform 0.3s;
+}
+.brand-logo-img:hover { transform: scale(1.05); }
+
+.brand-name {
+    font-size: 1.8rem;
+    font-weight: 900;
+    color: var(--text-sidebar-head);
+    margin-bottom: 6px;
+    letter-spacing: -0.5px;
+}
+
+.brand-tagline {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #10B981;
+    font-weight: 700;
+}
+
+.nav { margin: 40px 0; flex-grow: 1; }
+
+.nav-link {
+    display: block;
+    padding: 14px 0;
+    font-size: 1rem;
+    font-weight: 500;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    position: relative;
+    color: var(--text-sidebar);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.nav-link::before {
+    content: '';
+    position: absolute;
+    left: -20px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 4px;
+    height: 0;
+    background: #10B981;
+    transition: height 0.3s ease;
+    border-radius: 0 4px 4px 0;
+}
+
+.nav-link:hover, .nav-link.active { color: #ffffff; padding-left: 10px; }
+.nav-link:hover::before, .nav-link.active::before { height: 60%; left: -10px; }
+
+/* Main Content Area */
+.main {
+    margin-left: var(--sidebar-width);
+    flex-grow: 1;
+    width: calc(100% - var(--sidebar-width));
+    background-color: var(--bg-main);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    padding: 40px; /* Prevent cutoff against screen edge */
+}
+
+/* Hero Section */
+.hero {
+    background: var(--gradient-primary);
+    /* Assume defined in main.css for dark theme */
+    color: white;
+    padding: 180px 40px 120px;
+    text-align: center;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Background Pattern/Glow */
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at center, rgba(16, 185, 129, 0.15) 0%, transparent 60%);
+    z-index: 0;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.hero h1 {
+    font-size: clamp(3rem, 6vw, 5.5rem);
+    font-weight: 900;
+    font-family: var(--font-heading);
+    letter-spacing: -2px;
+    margin-bottom: 20px;
+    line-height: 1.1;
+    background: linear-gradient(180deg, #ffffff 0%, rgba(255, 255, 255, 0.7) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero-subtitle {
+    font-size: 1.6rem;
+    margin-bottom: 40px;
+    opacity: 0.9;
+    font-weight: 300;
+    color: #cbd5e1;
+}
+
+/* Team Badge styled specifically for hero */
+.team-number-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(16, 185, 129, 0.1);
+    backdrop-filter: blur(12px);
+    padding: 12px 30px;
+    border-radius: 50px;
+    border: 1px solid rgba(16, 185, 129, 0.3);
+    margin-bottom: 40px;
+    font-weight: 800;
+    font-size: 1.2rem;
+    letter-spacing: 2.5px;
+    color: #10B981;
+    box-shadow: 0 10px 30px rgba(16, 185, 129, 0.15);
+}
+
+.hero-desc {
+    max-width: 750px;
+    margin: 0 auto 50px;
+    font-size: 1.3rem;
+    line-height: 1.7;
+    color: #94a3b8;
+}
+
+/* Base Sections for SPA */
+section {
+    padding: 100px 0;
+    scroll-margin-top: 50px;
+}
+
+.section-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+/* Media Queries for Layout Fixing */
+@media (max-width: 900px) {
+    .mobile-header {
+        display: flex;
+    }
+
+    .sidebar {
+        transform: translateX(-100%);
+        width: 85%;
+        max-width: 350px;
+        box-shadow: 20px 0 50px rgba(0, 0, 0, 0.5);
+    }
+
+    .sidebar.active {
+        transform: translateX(0);
+    }
+
+    .main {
+        margin-left: 0;
+        width: 100%;
+    }
+}
+
+/* =========================================
+   SPA Component Styles
+   ========================================= */
+
+/* Team Grid */
+.team-section { padding: 100px 0 60px; }
+.team-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; max-width: 1100px; margin: 0 auto; }
+.team-card { 
+    background: rgba(15, 23, 42, 0.7); 
+    backdrop-filter: blur(12px); 
+    border: 1px solid rgba(255, 255, 255, 0.1); 
+    border-radius: 20px; 
+    padding: 40px 30px; 
+    text-align: center; 
+    transition: transform 0.3s ease, border-color 0.3s ease; 
+}
+.team-card:hover { transform: translateY(-8px); border-color: rgba(16, 185, 129, 0.4); }
+.team-avatar { width: 90px; height: 90px; border-radius: 50%; margin: 0 auto 20px; display: flex; align-items: center; justify-content: center; color: white; font-size: 2.2rem; box-shadow: 0 10px 20px rgba(0,0,0,0.2); }
+.team-card h3 { color: white !important; font-size: 1.4rem; margin-bottom: 5px; }
+
+/* Sponsors Grid */
+.sponsors-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; max-width: 1100px; margin: 40px auto; padding: 0 20px; }
+.sponsor-card { 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgba(15, 23, 42, 0.7); 
+    backdrop-filter: blur(12px); 
+    border: 1px solid rgba(255, 255, 255, 0.1); 
+    padding: 3rem 2rem; 
+    border-radius: 20px; 
+    text-align: center; 
+    transition: transform 0.3s ease, border-color 0.3s ease; 
+}
+.sponsor-card:hover { transform: translateY(-8px); border-color: rgba(16, 185, 129, 0.4); }
+.sponsor-card img { display: block; width: 100%; height: 75px; object-fit: contain; object-position: center; margin: 0 auto 25px auto; transition: all 0.3s ease; }
+.sponsor-card:hover img { transform: scale(1.05); }
+.sponsor-card h3 { color: white !important; font-family: var(--font-heading); font-size: 1.5rem; }
+
+/* Component Cards (Robot) */
+.component-card { 
+    background: rgba(15, 23, 42, 0.7); 
+    backdrop-filter: blur(12px); 
+    border: 1px solid rgba(255, 255, 255, 0.1); 
+    border-radius: 20px; 
+    padding: 2.5rem; 
+    margin-bottom: 2rem;
+    color: white;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+.component-card:hover { transform: translateY(-5px); border-color: rgba(16, 185, 129, 0.4); }
+.component-card h3 { color: white !important; font-family: var(--font-heading); margin-bottom: 1rem;}
+
+/* Updates & Forms */
+.update-card { 
+    background: rgba(15, 23, 42, 0.7); 
+    backdrop-filter: blur(12px); 
+    border: 1px solid rgba(255, 255, 255, 0.1); 
+    max-width: 800px; 
+    margin: 40px auto 4rem; 
+    border-radius: 20px; 
+    overflow: hidden; 
+}
+.update-content { padding: 3rem; color: #cbd5e1; }
+.update-content h2 { color: white !important; font-family: var(--font-heading); margin-bottom: 0.5rem;}
+.contact-section { padding: 0 2rem 6rem; max-width: 800px; margin: 0 auto; }
+.form-card { 
+    background: rgba(15, 23, 42, 0.7); 
+    backdrop-filter: blur(12px); 
+    border: 1px solid rgba(255, 255, 255, 0.1); 
+    padding: 3rem; 
+    border-radius: 16px; 
+}
+input, textarea { 
+    width: 100%; padding: 1rem; margin-bottom: 1.5rem; 
+    background: rgba(0, 0, 0, 0.2); border: 1px solid rgba(255, 255, 255, 0.1); 
+    color: white; border-radius: 8px; font-family: var(--font-main); 
+}
+input::placeholder, textarea::placeholder { color: #94a3b8; }
+button[type="submit"] { padding: 1rem 2.5rem; background: var(--ftc-accent); color: white; border: none; border-radius: 8px; cursor: pointer; font-weight: 600; font-size: 1rem; transition: 0.3s; }
+button[type="submit"]:hover { background: var(--ftc-accent-dark); }
+
+/* Component Media Queries */
+@media (max-width: 900px) {
+    .team-grid, .sponsors-grid { grid-template-columns: 1fr; }
+}
+
+/* Action Buttons Grid */
+.hero-actions {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* Primary btn overrides for FTC Green */
+.btn-primary-ftc {
+    background: linear-gradient(135deg, #10B981 0%, #059669 100%);
+    color: white;
+    padding: 16px 40px;
+    border-radius: 12px;
+    font-weight: 700;
+    font-family: var(--font-heading);
+    box-shadow: 0 10px 25px rgba(16, 185, 129, 0.3);
+    border: none;
+    font-size: 1.1rem;
+}
+
+.btn-primary-ftc:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 35px rgba(16, 185, 129, 0.4);
+}
+
+.btn-secondary-ftc {
+    background: rgba(255, 255, 255, 0.03);
+    color: white;
+    padding: 16px 40px;
+    border-radius: 12px;
+    font-weight: 700;
+    font-family: var(--font-heading);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+}
+
+.btn-secondary-ftc:hover {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: rgba(255, 255, 255, 0.4);
+    transform: translateY(-3px);
+}
+
+/* Footer Section */
+footer {
+    background: #0B1120;
+    color: rgba(255, 255, 255, 0.7);
+    padding: 80px 0 40px;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.footer-content {
+    max-width: 1280px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 50px;
+    padding: 0 40px;
+}
+
+.footer-col h3 {
+    color: #10B981;
+    margin-bottom: 25px;
+    font-size: 1.2rem;
+    font-family: var(--font-heading);
+    letter-spacing: 1px;
+}
+
+.footer-col p {
+    margin-bottom: 10px;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.footer-col a {
+    color: rgba(255, 255, 255, 0.7);
+    transition: color 0.3s;
+}
+
+.footer-col a:hover {
+    color: #10B981;
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+    nav .container {
+        padding: 0 20px;
+    }
+
+    .nav-logo img {
+        height: 60px;
+    }
+
+    nav ul {
+        display: none;
+        /* Hide standard nav on mobile, would need hamburger menu logic for real site */
+    }
+
+    .hero {
+        padding: 140px 20px 80px;
+    }
+
+    .hero h1 {
+        font-size: 3rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.3rem;
+    }
+
+    .hero-actions {
+        flex-direction: column;
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto;
+    }
+
+    .btn-primary-ftc,
+    .btn-secondary-ftc {
+        width: 100%;
+        text-align: center;
+    }
+
+    .footer-content {
+        padding: 0 20px;
+    }
+}
