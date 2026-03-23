@@ -4,8 +4,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BrickBots FLL #65018</title>
+    <title>BrickBots FLL #65018 | Unearthed Season</title>
     <link rel="icon" type="image/png" href="../../assets/images/brickbotsLogo.png">
+
+    <!-- Open Graph / Social Sharing -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://brickbots.org/teams/65018/">
+    <meta property="og:title" content="BrickBots FLL Team #65018 | Young Builders, Big Ideas">
+    <meta property="og:description" content="BrickBots FLL Team #65018 — a crew of 4th grade innovators tackling real-world problems through LEGO robotics, creative research, and teamwork.">
+    <meta property="og:image" content="https://brickbots.org/assets/images/brickbotsLogo.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="BrickBots FLL Team #65018">
+    <meta name="twitter:description" content="BrickBots FLL Team #65018 — a crew of 4th grade innovators tackling real-world problems through LEGO robotics, creative research, and teamwork.">
+    <meta name="twitter:image" content="https://brickbots.org/assets/images/brickbotsLogo.png">
 
     <!-- External CSS -->
     <link rel="stylesheet" href="../../assets/css/main.css">
@@ -42,20 +53,163 @@
             text-transform: uppercase;
             margin-bottom: 12px;
         }
-        .placeholder-box {
-            background: rgba(245, 158, 11, 0.07);
-            border: 1.5px dashed rgba(245, 158, 11, 0.35);
+
+        /* Iteration cards for Innovation Project */
+        .iteration-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+            margin: 1.5rem 0;
+        }
+        @media (min-width: 700px) {
+            .iteration-grid { grid-template-columns: repeat(4, 1fr); }
+        }
+        .iteration-card {
             border-radius: 12px;
-            padding: 20px 24px;
-            color: #94a3b8;
-            font-style: italic;
-            font-size: 0.95rem;
-            margin-bottom: 1rem;
+            padding: 18px 14px;
+            text-align: center;
+            font-size: 0.9rem;
+            font-weight: 600;
         }
-        .placeholder-box strong {
+        .iteration-card.fail {
+            background: rgba(239,68,68,0.1);
+            border: 1.5px solid rgba(239,68,68,0.3);
+            color: #fca5a5;
+        }
+        .iteration-card.pass {
+            background: rgba(16,185,129,0.1);
+            border: 1.5px solid rgba(16,185,129,0.3);
+            color: #6ee7b7;
+        }
+        .iteration-badge {
+            display: inline-block;
+            font-size: 0.7rem;
+            font-weight: 800;
+            letter-spacing: 0.1em;
+            padding: 2px 8px;
+            border-radius: 20px;
+            margin-bottom: 8px;
+        }
+        .iteration-badge.fail { background: #ef4444; color: white; }
+        .iteration-badge.pass { background: #10b981; color: white; }
+        .iteration-card p { font-size: 0.78rem; margin-top: 6px; opacity: 0.8; font-weight: 400; }
+
+        /* Solution feature grid */
+        .solution-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 14px;
+            margin-top: 1.5rem;
+        }
+        @media (min-width: 700px) {
+            .solution-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        .solution-item {
+            display: flex;
+            gap: 14px;
+            align-items: flex-start;
+            background: rgba(245,158,11,0.06);
+            border: 1px solid rgba(245,158,11,0.18);
+            border-radius: 12px;
+            padding: 16px 18px;
+        }
+        .solution-item i {
             color: #f59e0b;
-            font-style: normal;
+            font-size: 1.2rem;
+            margin-top: 2px;
+            flex-shrink: 0;
         }
+        .solution-item strong { color: #fcd34d; display: block; margin-bottom: 2px; }
+        .solution-item p { color: #94a3b8; font-size: 0.88rem; margin: 0; }
+
+        /* Strategy list */
+        .strategy-list {
+            list-style: none;
+            padding: 0;
+            margin: 1rem 0 0;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 10px;
+        }
+        @media (min-width: 700px) {
+            .strategy-list { grid-template-columns: repeat(2, 1fr); }
+        }
+        .strategy-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            color: #cbd5e1;
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+        .strategy-list li::before {
+            content: "→";
+            color: #f59e0b;
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+
+        /* Attachment chips */
+        .attachment-chips {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 1rem;
+        }
+        .chip {
+            background: rgba(245,158,11,0.12);
+            border: 1px solid rgba(245,158,11,0.3);
+            color: #fcd34d;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        /* Iteration timeline */
+        .robot-iteration-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+            margin-top: 1.5rem;
+        }
+        .robot-iteration-card {
+            background: rgba(255,255,255,0.04);
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 12px;
+            padding: 18px;
+            text-align: center;
+        }
+        .robot-iteration-card .step-num {
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            color: #f59e0b;
+            margin-bottom: 6px;
+            text-transform: uppercase;
+        }
+        .robot-iteration-card h4 { color: white; font-size: 0.95rem; margin-bottom: 6px; }
+        .robot-iteration-card p { color: #94a3b8; font-size: 0.82rem; }
+
+        /* Code myblock chips */
+        .myblock-list {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-top: 1rem;
+        }
+        .myblock-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            background: rgba(14,165,233,0.07);
+            border: 1px solid rgba(14,165,233,0.2);
+            border-radius: 10px;
+            padding: 12px 16px;
+            color: #bae6fd;
+            font-size: 0.9rem;
+        }
+        .myblock-item i { color: #38bdf8; flex-shrink: 0; }
     </style>
 </head>
 
@@ -100,11 +254,12 @@
                 <div class="hero-subtitle animate-fade-in delay-200">
                     <em>Young Builders, Big Ideas</em>
                 </div>
+                <div class="fll-badge animate-fade-in delay-200">🌍 Unearthed Season</div>
 
                 <p class="hero-desc animate-fade-in delay-300">
-                    BrickBots FLL Team 65018 is a team of 4th grade innovators competing in the
-                    FIRST LEGO League. They design, build, and program LEGO robots while tackling
-                    a real-world research challenge — proving that great engineering starts early.
+                    BrickBots FLL Team 65018 is a crew of 4th grade innovators competing in the FIRST LEGO League
+                    Unearthed season. They design, build, and program LEGO robots while engineering real-world
+                    solutions — proving that great innovation starts early.
                 </p>
 
                 <div class="hero-actions animate-fade-in delay-300">
@@ -120,21 +275,45 @@
                 <div class="container">
                     <div class="hero-eyebrow" style="text-align: center; display: block; margin-bottom: 10px;">Engineering</div>
                     <h2 style="font-size: 3.5rem; margin-bottom: 20px; color: white;" class="hero-heading">Our <span class="gradient-text">Robot</span></h2>
-                    <p style="font-size: 1.2rem; color: #94a3b8;">Built with LEGO SPIKE Prime — designed, built, and programmed entirely by the team</p>
+                    <p style="font-size: 1.2rem; color: #94a3b8; text-align: center;">The Buggy Bot — designed, built, and programmed entirely by the team</p>
                 </div>
             </section>
             <div class="container" style="padding-top: 4rem; padding-bottom: 4rem;">
 
-                <div class="placeholder-box">
-                    <strong>📸 Add a robot photo</strong> — drop <code>robotphoto.png</code> into <code>teams/65018/assets/images/</code>
-                </div>
-
                 <div class="component-card">
                     <h3 style="font-size: 1.5rem; margin-bottom: 1rem; color: #0F172A;">
-                        <i class="fas fa-robot" style="color: #f59e0b;"></i> Drive Base
+                        <i class="fas fa-robot" style="color: #f59e0b;"></i> Drive Base — The Buggy Bot
                     </h3>
-                    <div class="placeholder-box">
-                        <strong>Placeholder:</strong> Describe the robot's drive base — motor configuration, wheel type, drivetrain design, and any key structural decisions.
+                    <p style="color: #475569; margin-bottom: 1rem;">
+                        The Buggy Bot uses a <strong>neutral mid-range gear ratio</strong> optimized for both speed and torque across the competition mat. The chassis is a lightweight yet rigid SPIKE structure with support framing in front for passive heavy attachments and a gravity-drop system for quick attachment swaps. Key design features include:
+                    </p>
+                    <div class="attachment-chips">
+                        <span class="chip">Neutral mid-range gear ratio</span>
+                        <span class="chip">Metal Caster Ball (rear)</span>
+                        <span class="chip">Rubber Tires</span>
+                        <span class="chip">Internal cable routing</span>
+                        <span class="chip">Aligner module</span>
+                        <span class="chip">Flicker mechanism</span>
+                        <span class="chip">Gravity-drop attachment mount</span>
+                    </div>
+
+                    <h4 style="margin-top: 2rem; margin-bottom: 0.75rem; color: #0F172A;">Robot Iterations</h4>
+                    <div class="robot-iteration-grid">
+                        <div class="robot-iteration-card">
+                            <div class="step-num">Build 1</div>
+                            <h4>First Build</h4>
+                            <p>Spike Advanced Driving Base — our starting platform to learn the field.</p>
+                        </div>
+                        <div class="robot-iteration-card">
+                            <div class="step-num">Build 2</div>
+                            <h4>Improved Motors</h4>
+                            <p>Repositioned motors for better weight distribution and attachment access.</p>
+                        </div>
+                        <div class="robot-iteration-card">
+                            <div class="step-num">Build 3</div>
+                            <h4>Competition Ready</h4>
+                            <p>Final Buggy Bot — light, fast, and optimized for all 5 routes.</p>
+                        </div>
                     </div>
                 </div>
 
@@ -142,8 +321,18 @@
                     <h3 style="font-size: 1.5rem; margin-bottom: 1rem; color: #0F172A;">
                         <i class="fas fa-hand-paper" style="color: #f59e0b;"></i> Attachments
                     </h3>
-                    <div class="placeholder-box">
-                        <strong>Placeholder:</strong> Describe the robot's mission attachments — how many, what they do, how they attach/detach, and which missions they solve.
+                    <p style="color: #475569; margin-bottom: 1rem;">
+                        The team designed <strong>7 purpose-built attachments</strong> covering all mission runs on the Unearthed mat. Each attaches and detaches quickly using the gravity-drop mount system, allowing the robot to run multiple missions per base launch.
+                    </p>
+                    <div class="attachment-chips">
+                        <span class="chip">🚀 Launch Pads</span>
+                        <span class="chip">🔧 Rig</span>
+                        <span class="chip">📐 Aligner</span>
+                        <span class="chip">Route 1</span>
+                        <span class="chip">Route 2</span>
+                        <span class="chip">Route 3</span>
+                        <span class="chip">Route 4</span>
+                        <span class="chip">Route 5</span>
                     </div>
                 </div>
 
@@ -151,9 +340,51 @@
                     <h3 style="font-size: 1.5rem; margin-bottom: 1rem; color: #0F172A;">
                         <i class="fas fa-code" style="color: #f59e0b;"></i> Programming
                     </h3>
-                    <div class="placeholder-box">
-                        <strong>Placeholder:</strong> Describe how the robot is programmed — language used (SPIKE App / Python), autonomous runs, how the team handles gyro corrections or sensor feedback.
+                    <p style="color: #475569; margin-bottom: 1rem;">
+                        The robot is programmed using the <strong>SPIKE App</strong> with a block-based architecture built around reusable myblocks for maximum consistency between runs. The team's key coding innovations:
+                    </p>
+                    <div class="myblock-list">
+                        <div class="myblock-item">
+                            <i class="fas fa-hand-pointer"></i>
+                            <span><strong>Single-click run advancement</strong> — eliminates multiple button presses between runs for faster transitions</span>
+                        </div>
+                        <div class="myblock-item">
+                            <i class="fas fa-sliders-h"></i>
+                            <span><strong>Initialization myblock</strong> — sets all global parameters for every run in one place</span>
+                        </div>
+                        <div class="myblock-item">
+                            <i class="fas fa-play-circle"></i>
+                            <span><strong>Run Execution myblock</strong> — standardized runner that sequences each mission autonomously</span>
+                        </div>
+                        <div class="myblock-item">
+                            <i class="fas fa-cog"></i>
+                            <span><strong>Move Attachment Motor block</strong> — dedicated myblock for consistent attachment actuation</span>
+                        </div>
+                        <div class="myblock-item">
+                            <i class="fas fa-arrows-alt-h"></i>
+                            <span><strong>Move Straight with Yaw & Broadcast</strong> — gyro-corrected straight-line driving with inter-block communication</span>
+                        </div>
                     </div>
+                </div>
+
+                <div class="component-card">
+                    <h3 style="font-size: 1.5rem; margin-bottom: 1rem; color: #0F172A;">
+                        <i class="fas fa-chess" style="color: #f59e0b;"></i> Robot Game Strategy
+                    </h3>
+                    <p style="color: #475569; margin-bottom: 1rem;">
+                        The team's competition strategy is built around maximizing points through efficient routing and reliable autonomous execution:
+                    </p>
+                    <ul class="strategy-list">
+                        <li>Break Missions into parts and <strong>target max points</strong> per mission</li>
+                        <li><strong>Prioritize minimal movement</strong> to mission models</li>
+                        <li>Target a <strong>single launch point per base</strong> for all tasks</li>
+                        <li><strong>Design Jigs</strong> for placement consistency across runs</li>
+                        <li>Prioritize <strong>loose piece collection</strong> in early runs</li>
+                        <li>Design attachments to <strong>complete individual missions</strong> cleanly</li>
+                        <li>Group missions into runs and <strong>combine attachments</strong> to max points</li>
+                        <li>Create a <strong>Route Plan</strong> sequencing missions for optimal scoring</li>
+                        <li><strong>Iterate runs</strong> continuously for accuracy and efficiency</li>
+                    </ul>
                 </div>
 
             </div>
@@ -164,25 +395,94 @@
             <section class="hero-section">
                 <div class="hero-eyebrow" style="text-align: center; display: block; margin-bottom: 10px;">Research</div>
                 <h2 style="font-size: 3.5rem; margin-bottom: 20px; color: white;" class="hero-heading">Innovation <span class="gradient-text">Project</span></h2>
-                <p style="font-size: 1.2rem; color: #94a3b8; text-align: center; max-width: 600px; margin: 0 auto;">FLL teams identify a real-world problem and engineer a creative solution</p>
+                <p style="font-size: 1.2rem; color: #94a3b8; text-align: center; max-width: 700px; margin: 0 auto;">FLL teams identify a real-world problem and engineer a creative solution</p>
             </section>
             <div class="container" style="padding-top: 4rem; padding-bottom: 4rem;">
 
                 <div class="component-card">
-                    <h3 style="font-size: 1.5rem; margin-bottom: 1rem; color: #0F172A;">
-                        <i class="fas fa-lightbulb" style="color: #f59e0b;"></i> The Problem
+                    <h3 style="font-size: 1.5rem; margin-bottom: 0.5rem; color: #0F172A;">
+                        <i class="fas fa-egg" style="color: #f59e0b;"></i> The Problem
                     </h3>
-                    <div class="placeholder-box">
-                        <strong>Placeholder:</strong> What real-world problem did the team identify this season? Describe the issue and why it matters.
+                    <div class="fll-badge" style="margin-bottom: 1rem;">Egg-cellent Egg-scavation Egg-speriments</div>
+                    <p style="color: #475569;">
+                        How do you excavate <strong>fragile buried artifacts</strong> — like fossil eggs — without damaging them? Archaeologists and paleontologists face this challenge constantly. The team set out to design a smarter excavation tool by testing a range of real methods and pushing them to failure.
+                    </p>
+
+                    <h4 style="margin-top: 1.75rem; margin-bottom: 0.75rem; color: #0F172A;">What the Team Tested</h4>
+                    <div class="iteration-grid">
+                        <div class="iteration-card fail">
+                            <span class="iteration-badge fail">FAIL</span>
+                            <div>🪚 Trowel</div>
+                            <p>Too sharp and strong — damages fragile specimens</p>
+                        </div>
+                        <div class="iteration-card fail">
+                            <span class="iteration-badge fail">FAIL</span>
+                            <div>⛏️ Pick-Axe</div>
+                            <p>Too hard to control softness — unpredictable force</p>
+                        </div>
+                        <div class="iteration-card fail">
+                            <span class="iteration-badge fail">FAIL</span>
+                            <div>🖌️ Brush</div>
+                            <p>Very slow — impractical for real excavation</p>
+                        </div>
+                        <div class="iteration-card pass">
+                            <span class="iteration-badge pass">PASS</span>
+                            <div>📳 Vibration</div>
+                            <p>Iteration ready — precise, gentle, effective</p>
+                        </div>
                     </div>
                 </div>
 
                 <div class="component-card">
-                    <h3 style="font-size: 1.5rem; margin-bottom: 1rem; color: #0F172A;">
-                        <i class="fas fa-flask" style="color: #f59e0b;"></i> Our Solution
+                    <h3 style="font-size: 1.5rem; margin-bottom: 0.5rem; color: #0F172A;">
+                        <i class="fas fa-flask" style="color: #f59e0b;"></i> Our Solution — The Sonic Shifter
                     </h3>
-                    <div class="placeholder-box">
-                        <strong>Placeholder:</strong> Describe the team's proposed solution. How does it work? Who did they interview or consult? What makes it innovative?
+                    <p style="color: #475569; margin-bottom: 1.25rem;">
+                        Inspired by sonic vibration's ability to gently displace soil, the team designed the <strong>Sonic Shifter</strong> — an AI-concept excavation device that combines multiple technologies to handle fragile buried finds safely and efficiently.
+                    </p>
+                    <div class="solution-grid">
+                        <div class="solution-item">
+                            <i class="fas fa-wave-square"></i>
+                            <div>
+                                <strong>Sonic Shifter Emitter</strong>
+                                <p>Gently excavates artifacts with precise sonic frequencies — loosens soil without contact force.</p>
+                            </div>
+                        </div>
+                        <div class="solution-item">
+                            <i class="fas fa-hand-scissors"></i>
+                            <div>
+                                <strong>Articulated Claws</strong>
+                                <p>Delicate, extendable grips for manipulating fragile finds with variable pressure control.</p>
+                            </div>
+                        </div>
+                        <div class="solution-item">
+                            <i class="fas fa-broadcast-tower"></i>
+                            <div>
+                                <strong>Subsurface Scanner</strong>
+                                <p>Real-time display shows buried object details and composition before any digging begins.</p>
+                            </div>
+                        </div>
+                        <div class="solution-item">
+                            <i class="fas fa-hand-point-up"></i>
+                            <div>
+                                <strong>Haptic Feedback Grip</strong>
+                                <p>Alerts the operator to material changes and object proximity to prevent over-excavation.</p>
+                            </div>
+                        </div>
+                        <div class="solution-item">
+                            <i class="fas fa-sliders-h"></i>
+                            <div>
+                                <strong>Environmental Adaptation</strong>
+                                <p>Auto-adjusts emitter settings for diverse excavation conditions — wet, dry, rocky, or clay soils.</p>
+                            </div>
+                        </div>
+                        <div class="solution-item">
+                            <i class="fas fa-lightbulb"></i>
+                            <div>
+                                <strong>Integrated Lighting</strong>
+                                <p>Localized light capable of UV/IR spectrum for revealing hidden details in artifacts.</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
@@ -190,7 +490,9 @@
                     <h3 style="font-size: 1.5rem; margin-bottom: 1rem; color: #0F172A;">
                         <i class="fas fa-star" style="color: #f59e0b;"></i> Core Values
                     </h3>
-                    <p>FLL Core Values are at the heart of everything Team 65018 does — we win together, respect each other, and always have fun.</p>
+                    <p style="color: #475569;">
+                        FLL Core Values are at the heart of everything Team 65018 does. We discover together, we are stronger as a team, and we have fun while we learn. Every robot run, every innovation experiment, and every presentation reflects who we are — curious, kind, and determined.
+                    </p>
                 </div>
 
             </div>
@@ -204,27 +506,35 @@
                 <div class="team-grid">
 
                     <div class="team-card">
-                        <div class="team-avatar" style="background: #b45309;"><i class="fas fa-robot"></i></div>
-                        <h3>[Team Member 1]</h3>
-                        <p style="color: #fcd34d; font-weight: 600;">[Role — e.g., Robot Designer]</p>
+                        <div class="team-avatar" style="background: linear-gradient(135deg, #b45309, #92400e);">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <h3>Saanvi</h3>
+                        <p style="color: #fcd34d; font-weight: 600;">Robot Designer · Bots Team</p>
                     </div>
 
                     <div class="team-card">
-                        <div class="team-avatar" style="background: #b45309;"><i class="fas fa-code"></i></div>
-                        <h3>[Team Member 2]</h3>
-                        <p style="color: #fcd34d; font-weight: 600;">[Role — e.g., Programmer]</p>
+                        <div class="team-avatar" style="background: linear-gradient(135deg, #b45309, #92400e);">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+                        <h3>Anwita</h3>
+                        <p style="color: #fcd34d; font-weight: 600;">Innovation Project Lead · Bots Team</p>
                     </div>
 
                     <div class="team-card">
-                        <div class="team-avatar" style="background: #b45309;"><i class="fas fa-lightbulb"></i></div>
-                        <h3>[Team Member 3]</h3>
-                        <p style="color: #fcd34d; font-weight: 600;">[Role — e.g., Innovation Project Lead]</p>
+                        <div class="team-avatar" style="background: linear-gradient(135deg, #b45309, #92400e);">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h3>Rajvir</h3>
+                        <p style="color: #fcd34d; font-weight: 600;">Programmer · Bricks Team</p>
                     </div>
 
                     <div class="team-card">
-                        <div class="team-avatar" style="background: #b45309;"><i class="fas fa-users"></i></div>
-                        <h3>[Team Member 4]</h3>
-                        <p style="color: #fcd34d; font-weight: 600;">[Role — e.g., Core Values Captain]</p>
+                        <div class="team-avatar" style="background: linear-gradient(135deg, #b45309, #92400e);">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h3>Siyona</h3>
+                        <p style="color: #fcd34d; font-weight: 600;">Core Values Captain · Bricks Team</p>
                     </div>
 
                 </div>
@@ -288,8 +598,8 @@
                 <p>Team #65018</p>
                 <p>Est. 2025</p>
                 <div style="margin-top: 20px; font-size: 1.5rem; display: flex; gap: 15px;">
-                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="https://www.instagram.com/brickbotsrobotics" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.youtube.com/@brickbotsrobotics" target="_blank" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
                 </div>
             </div>
 
@@ -307,12 +617,11 @@
                 <p><i class="fa-solid fa-envelope" style="margin-right: 10px; color: var(--ftc-accent);"></i>
                     fll65018@brickbots.org</p>
                 <p><i class="fa-solid fa-location-dot" style="margin-right: 10px; color: var(--ftc-accent);"></i>
-                    BrickBots Facility</p>
+                    BrickBots Facility, Fremont CA</p>
             </div>
         </div>
 
-        <div
-            style="text-align: center; margin-top: 60px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.05); color: rgba(255,255,255,0.4); font-size: 0.85rem;">
+        <div style="text-align: center; margin-top: 60px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.05); color: rgba(255,255,255,0.4); font-size: 0.85rem;">
             &copy; 2026 BrickBots Innovation Accelerator. All rights reserved.
         </div>
     </footer>
