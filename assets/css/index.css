@@ -365,15 +365,15 @@ section {
     margin-bottom: 25px;
     object-fit: contain;
     max-width: 100%;
-    opacity: 0.6;
+    opacity: 1;
     transition: opacity 0.3s ease, transform 0.3s ease;
-    filter: grayscale(100%);
+    filter: none;
 }
 
 .partner-card:hover .partner-logo {
     opacity: 1;
     transform: scale(1.05);
-    filter: grayscale(0%);
+    filter: none;
 }
 
 .partner-name {
